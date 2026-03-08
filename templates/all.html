@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>All Results</title>
+</head>
+
+<body>
+
+<h2>All Student Results</h2>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Total</th>
+<th>Percentage</th>
+<th>Grade</th>
+</tr>
+
+{% for row in data %}
+
+<tr>
+<td>{{row[1]}}</td>
+<td>{{row[7]}}</td>
+<td>{{row[8]}}</td>
+<td>{{row[9]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
