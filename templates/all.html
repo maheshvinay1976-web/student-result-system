@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>All Results</title>
+    <title>All Student Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9f9f9, #d4f1f9);
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+        h2 {
+            color: #4a90e2;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 800px;
+        }
+        th, td {
+            border: 1px solid #66a6ff;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #66a6ff;
+            color: white;
+        }
+        td {
+            background-color: #f0f8ff;
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
 
 <h2>All Student Results</h2>
 
-<table border="1">
-
-<tr>
-<th>Name</th>
-<th>Total</th>
-<th>Percentage</th>
-<th>Grade</th>
-</tr>
-
-{% for row in data %}
-
-<tr>
-<td>{{row[1]}}</td>
-<td>{{row[7]}}</td>
-<td>{{row[8]}}</td>
-<td>{{row[9]}}</td>
-</tr>
-
-{% endfor %}
-
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Mathematics</th>
+        <th>Physics</th>
+        <th>Chemistry</th>
+        <th>English</th>
+        <th>Computer Science</th>
+        <th>Total</th>
+        <th>Percentage</th>
+        <th>Grade</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.s1 }}</td>
+        <td>{{ student.s2 }}</td>
+        <td>{{ student.s3 }}</td>
+        <td>{{ student.s4 }}</td>
+        <td>{{ student.s5 }}</td>
+        <td>{{ student.total }}</td>
+        <td>{{ student.percentage }}%</td>
+        <td>{{ student.grade }}</td>
+    </tr>
+    {% endfor %}
 </table>
+
+<a href="/">Enter New Student</a>
 
 </body>
 </html>
