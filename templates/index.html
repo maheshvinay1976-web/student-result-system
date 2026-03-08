@@ -1,7 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Student Result System</title>
+    <title>Student Result System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        form {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #66a6ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #89f7fe;
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -9,31 +57,28 @@
 <h2>Enter Student Marks</h2>
 
 <form action="/result" method="post">
+    Name:<br>
+    <input type="text" name="name" placeholder="Enter Student Name"><br>
 
-Name<br>
-<input type="text" name="name"><br><br>
+    Mathematics:<br>
+    <input type="number" name="s1" placeholder="Marks out of 100"><br>
 
-Subject 1<br>
-<input type="number" name="s1"><br><br>
+    Physics:<br>
+    <input type="number" name="s2" placeholder="Marks out of 100"><br>
 
-Subject 2<br>
-<input type="number" name="s2"><br><br>
+    Chemistry:<br>
+    <input type="number" name="s3" placeholder="Marks out of 100"><br>
 
-Subject 3<br>
-<input type="number" name="s3"><br><br>
+    English:<br>
+    <input type="number" name="s4" placeholder="Marks out of 100"><br>
 
-Subject 4<br>
-<input type="number" name="s4"><br><br>
+    Computer Science:<br>
+    <input type="number" name="s5" placeholder="Marks out of 100"><br>
 
-Subject 5<br>
-<input type="number" name="s5"><br><br>
-
-<button type="submit">Calculate Result</button>
-
+    <button type="submit">Calculate Result</button>
 </form>
 
 <br>
-
 <a href="/all">View All Results</a>
 
 </body>
