@@ -1,21 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Result</title>
+    <title>Student Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9f9f9, #d4f1f9);
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+        h2 {
+            color: #4a90e2;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 600px;
+        }
+        th, td {
+            border: 1px solid #66a6ff;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #66a6ff;
+            color: white;
+        }
+        td {
+            background-color: #f0f8ff;
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
 
-<h2>Student Result</h2>
+<h2>Result of {{ name }}</h2>
 
-Name: {{name}} <br>
-Total: {{total}} <br>
-Percentage: {{percentage}}% <br>
-Grade: {{grade}}
+<table>
+    <tr>
+        <th>Subject</th>
+        <th>Marks</th>
+    </tr>
+    <tr><td>Mathematics</td><td>{{ s1 }}</td></tr>
+    <tr><td>Physics</td><td>{{ s2 }}</td></tr>
+    <tr><td>Chemistry</td><td>{{ s3 }}</td></tr>
+    <tr><td>English</td><td>{{ s4 }}</td></tr>
+    <tr><td>Computer Science</td><td>{{ s5 }}</td></tr>
+    <tr>
+        <th>Total</th>
+        <td>{{ total }}</td>
+    </tr>
+    <tr>
+        <th>Percentage</th>
+        <td>{{ percentage }}%</td>
+    </tr>
+    <tr>
+        <th>Grade</th>
+        <td>{{ grade }}</td>
+    </tr>
+</table>
 
-<br><br>
-
-<a href="/">Back</a>
+<a href="/">Enter Another Student</a> | <a href="/all">View All Results</a>
 
 </body>
 </html>
